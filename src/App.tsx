@@ -144,10 +144,10 @@ function App() {
           <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
             <div className="section-container py-4 flex justify-between items-center">
               <div className="flex items-center gap-2">
-                <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <div className="w-10 h-10 bg-gradient-to-r from-[#2563EB] to-[#1F2937] rounded-lg flex items-center justify-center">
                   <Brain className="text-white" size={24} />
                 </div>
-                <span className="font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                <span className="font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r from-[#2563EB] to-[#1F2937]">
                   Infinity Tutor
                 </span>
               </div>
@@ -181,15 +181,15 @@ function App() {
 
               <div className="grid md:grid-cols-3 gap-6 mb-8">
                 <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-100 to-blue-200 rounded-lg flex items-center justify-center mb-4">
-                    <BookOpen className="text-blue-600" size={24} />
+                  <div className="w-12 h-12 bg-gradient-to-r from-[#2563EB]/10 to-[#2563EB]/20 rounded-lg flex items-center justify-center mb-4">
+                    <BookOpen className="text-[#2563EB]" size={24} />
                   </div>
                   <h3 className="font-bold text-gray-900 text-lg mb-2">Choose Topic</h3>
                   <p className="text-gray-600 text-sm mb-4">Select from Math, Physics, Chemistry, and Biology</p>
                   <select 
                     value={selectedSubject}
                     onChange={(e) => setSelectedSubject(e.target.value as any)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#2563EB]"
                   >
                     <option value="all">All Subjects</option>
                     <option value="mathematics">Mathematics</option>
@@ -200,8 +200,8 @@ function App() {
                 </div>
 
                 <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-100 to-purple-200 rounded-lg flex items-center justify-center mb-4">
-                    <Zap className="text-purple-600" size={24} />
+                  <div className="w-12 h-12 bg-gradient-to-r from-[#1F2937]/10 to-[#1F2937]/20 rounded-lg flex items-center justify-center mb-4">
+                    <Zap className="text-[#1F2937]" size={24} />
                   </div>
                   <h3 className="font-bold text-gray-900 text-lg mb-2">Your Progress</h3>
                   <p className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">85%</p>
@@ -210,7 +210,7 @@ function App() {
 
                 <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-100 to-green-200 rounded-lg flex items-center justify-center mb-4">
-                    <Target className="text-green-600" size={24} />
+                    <Target className="text-[#16A34A]" size={24} />
                   </div>
                   <h3 className="font-bold text-gray-900 text-lg mb-2">Weak Areas</h3>
                   <ul className="text-sm text-gray-600 space-y-1">
@@ -225,28 +225,28 @@ function App() {
                 <div className="grid md:grid-cols-2 gap-6">
                   <button 
                     onClick={() => setCurrentLearningModule('practice')}
-                    className="p-6 border-2 border-blue-200 rounded-xl hover:bg-blue-50 transition-all text-left hover:border-blue-400 cursor-pointer"
+                    className="p-6 border-2 border-[#2563EB]/20 rounded-xl hover:bg-blue-50/70 transition-all text-left hover:border-[#2563EB] cursor-pointer"
                   >
                     <h3 className="font-bold text-gray-900 mb-2">📝 Practice Questions</h3>
                     <p className="text-gray-600 text-sm">Solve adaptive questions tailored to your level</p>
                   </button>
                   <button 
                     onClick={() => setCurrentLearningModule('weakness')}
-                    className="p-6 border-2 border-purple-200 rounded-xl hover:bg-purple-50 transition-all text-left hover:border-purple-400 cursor-pointer"
+                    className="p-6 border-2 border-[#2563EB]/20 rounded-xl hover:bg-[#F3F4F6] transition-all text-left hover:border-[#2563EB] cursor-pointer"
                   >
                     <h3 className="font-bold text-gray-900 mb-2">🎯 Weakness Revision</h3>
                     <p className="text-gray-600 text-sm">Focus on topics where you need the most help</p>
                   </button>
                   <button 
                     onClick={() => setCurrentLearningModule('analytics')}
-                    className="p-6 border-2 border-green-200 rounded-xl hover:bg-green-50 transition-all text-left hover:border-green-400 cursor-pointer"
+                    className="p-6 border-2 border-[#84CC16]/30 rounded-xl hover:bg-[#F3F4F6] transition-all text-left hover:border-[#84CC16] cursor-pointer"
                   >
                     <h3 className="font-bold text-gray-900 mb-2">📊 View Analytics</h3>
                     <p className="text-gray-600 text-sm">See detailed insights on your performance</p>
                   </button>
                   <button 
                     onClick={() => setCurrentLearningModule('materials')}
-                    className="p-6 border-2 border-pink-200 rounded-xl hover:bg-pink-50 transition-all text-left hover:border-pink-400 cursor-pointer"
+                    className="p-6 border-2 border-[#2563EB]/20 rounded-xl hover:bg-[#F3F4F6] transition-all text-left hover:border-[#2563EB] cursor-pointer"
                   >
                     <h3 className="font-bold text-gray-900 mb-2">🗂️ Study Materials</h3>
                     <p className="text-gray-600 text-sm">Access curated learning resources</p>
@@ -257,7 +257,7 @@ function App() {
               {/* Learning Modules */}
               {currentLearningModule === 'practice' && (
                 <div className="bg-white rounded-xl p-8 border border-gray-100 mt-8">
-                  <button onClick={() => {setCurrentLearningModule('home'); setCurrentQuestionIndex(0); setUserAnswers({}); setPracticeCompleted(false); setIsAnswerCorrect(false);}} className="mb-4 text-blue-600 hover:underline font-semibold">← Back to Dashboard</button>
+                  <button onClick={() => {setCurrentLearningModule('home'); setCurrentQuestionIndex(0); setUserAnswers({}); setPracticeCompleted(false); setIsAnswerCorrect(false);}} className="mb-4 text-[#2563EB] hover:underline font-semibold">← Back to Dashboard</button>
                   
                   {!practiceCompleted ? (
                     <>
@@ -271,7 +271,7 @@ function App() {
                           <select 
                             value={selectedSubject}
                             onChange={(e) => {setSelectedSubject(e.target.value as any); setCurrentQuestionIndex(0); setUserAnswers({}); setIsAnswerCorrect(false);}}
-                            className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
+                            className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#2563EB]"
                           >
                             <option value="all">All Subjects</option>
                             <option value="mathematics">Mathematics</option>
@@ -284,7 +284,7 @@ function App() {
 
                       {currentQuestion ? (
                         <>
-                          <div className="mb-6 p-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border-2 border-blue-200">
+                          <div className="mb-6 p-6 bg-gradient-to-r from-[#F3F4F6] via-white to-[#F3F4F6] rounded-xl border-2 border-[#2563EB]/20">
                             <div className="flex justify-between items-center mb-4">
                               <span className="text-sm font-semibold text-gray-600">Question {currentQuestionIndex + 1} of {filteredQuestions.length}</span>
                               <span className={`px-3 py-1 text-white text-xs font-bold rounded-full ${currentQuestion.difficulty === 'EASY' ? 'bg-green-500' : currentQuestion.difficulty === 'INTERMEDIATE' ? 'bg-yellow-500' : 'bg-red-500'}`}>
@@ -299,12 +299,12 @@ function App() {
                                 const isCorrect = option === currentQuestion.correct;
                                 const showResult = userAnswers[currentQuestion.id] !== undefined;
                                 
-                                let bgColor = 'border-gray-200 hover:border-blue-400 hover:bg-white';
+                                let bgColor = 'border-gray-200 hover:border-[#2563EB] hover:bg-white';
                                 if (showResult) {
                                   if (isCorrect) {
-                                    bgColor = 'border-green-500 bg-green-50';
+                                    bgColor = 'border-[#16A34A] bg-green-50/50';
                                   } else if (isSelected && !isCorrect) {
-                                    bgColor = 'border-red-500 bg-red-50';
+                                    bgColor = 'border-[#DC2626] bg-red-50/50';
                                   }
                                 }
                                 
@@ -322,7 +322,7 @@ function App() {
                                   >
                                     <span className="text-gray-700 text-left">{option}</span>
                                     {showResult && isCorrect && (
-                                      <span className="text-green-600 font-bold text-lg">✓</span>
+                                      <span className="text-[#16A34A] font-bold text-lg">✓</span>
                                     )}
                                     {showResult && isSelected && !isCorrect && (
                                       <span className="text-red-600 font-bold text-lg">✗</span>
@@ -333,8 +333,8 @@ function App() {
                             </div>
 
                             {userAnswers[currentQuestion.id] && (
-                              <div className={`mt-4 p-4 rounded-lg ${isAnswerCorrect ? 'bg-green-100 border border-green-500' : 'bg-red-100 border border-red-500'}`}>
-                                <p className={`font-semibold ${isAnswerCorrect ? 'text-green-800' : 'text-red-800'}`}>
+                              <div className={`mt-4 p-4 rounded-lg ${isAnswerCorrect ? 'bg-green-100/70 border border-green-400' : 'bg-red-100/70 border border-red-400'}`}>
+                                <p className={`font-semibold ${isAnswerCorrect ? 'text-green-800' : 'text-[#7F1D1D]'}`}>
                                   {isAnswerCorrect ? '✓ Correct! Well done!' : '✗ Incorrect. Try again or move to the next question.'}
                                 </p>
                                 <p className="text-sm mt-2 text-gray-700">
@@ -355,7 +355,7 @@ function App() {
                                     }
                                   }}
                                   disabled={!userAnswers[currentQuestion.id]}
-                                  className="flex-1 px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-bold hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                                  className="flex-1 px-6 py-4 bg-gradient-to-r from-[#2563EB] to-[#1E40AF] text-white rounded-lg font-bold hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
                                   Next Question →
                                 </button>
@@ -369,7 +369,7 @@ function App() {
                                     }
                                   }}
                                   disabled={!userAnswers[currentQuestion.id]}
-                                  className="flex-1 px-6 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-lg font-bold hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                                  className="flex-1 px-6 py-4 bg-gradient-to-r from-[#84CC16] to-[#65A30D] text-white rounded-lg font-bold hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
                                   ✓ Submit & Finish
                                 </button>
@@ -392,18 +392,18 @@ function App() {
                   ) : (
                     <div className="p-8 text-center">
                       <div className="inline-block mb-4">
-                        <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center">
+                        <div className="w-20 h-20 bg-gradient-to-br from-[#84CC16] to-[#65A30D] rounded-full flex items-center justify-center">
                           <CheckCircle className="text-white" size={40} />
                         </div>
                       </div>
                       <h3 className="text-3xl font-bold text-gray-900 mb-2">Quiz Completed! 🎉</h3>
                       <p className="text-gray-600 mb-6">You answered {Object.keys(userAnswers).length} out of {filteredQuestions.length} questions.</p>
                       
-                      <div className="bg-blue-50 p-6 rounded-xl mb-6 text-left">
+                      <div className="bg-blue-50/70 p-6 rounded-xl mb-6 text-left">
                         <h4 className="font-bold text-gray-900 mb-4">Your Answers:</h4>
                         <div className="space-y-2">
                           {filteredQuestions.map((q, idx) => (
-                            <div key={q.id} className={`p-3 rounded-lg ${userAnswers[q.id] === q.correct ? 'bg-green-100' : 'bg-red-100'}`}>
+                            <div key={q.id} className={`p-3 rounded-lg ${userAnswers[q.id] === q.correct ? 'bg-green-100/50' : 'bg-red-100/50'}`}>
                               <p className="text-sm font-semibold text-gray-900">Q{idx + 1}: {userAnswers[q.id] === q.correct ? '✓ Correct' : '✗ Incorrect'}</p>
                               <p className="text-xs text-gray-700">Your answer: {userAnswers[q.id]}</p>
                             </div>
@@ -419,7 +419,7 @@ function App() {
                             setPracticeCompleted(false);
                             setIsAnswerCorrect(false);
                           }}
-                          className="flex-1 px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-bold hover:shadow-lg transition-all"
+                          className="flex-1 px-6 py-4 bg-gradient-to-r from-[#2563EB] to-[#1E40AF] text-white rounded-lg font-bold hover:shadow-lg transition-all"
                         >
                           Retake Quiz
                         </button>
@@ -437,24 +437,24 @@ function App() {
 
               {currentLearningModule === 'weakness' && (
                 <div className="bg-white rounded-xl p-8 border border-gray-100 mt-8">
-                  <button onClick={() => setCurrentLearningModule('home')} className="mb-4 text-blue-600 hover:underline font-semibold">← Back to Dashboard</button>
+                  <button onClick={() => setCurrentLearningModule('home')} className="mb-4 text-[#2563EB] hover:underline font-semibold">← Back to Dashboard</button>
                   <h2 className="text-3xl font-bold text-gray-900 mb-6">🎯 Weakness Revision - Focus Areas</h2>
                   <div className="space-y-4">
-                    <div className="p-4 bg-red-50 border-l-4 border-red-500 rounded">
+                    <div className="p-4 bg-red-50/70 border-l-4 border-[#DC2626] rounded">
                       <h3 className="font-bold text-gray-900 mb-2">📌 Calculus Derivatives (85% weak)</h3>
                       <p className="text-gray-700 text-sm mb-3">You've struggled with chain rule and product rule. AI recommends 5 focused questions.</p>
-                      <button className="px-4 py-2 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-700 transition-all">
+                      <button className="px-4 py-2 bg-[#DC2626] text-white rounded-lg font-semibold hover:bg-red-800 transition-all">
                         Practice Now
                       </button>
                     </div>
-                    <div className="p-4 bg-orange-50 border-l-4 border-orange-500 rounded">
+                    <div className="p-4 bg-orange-50/70 border-l-4 border-[#EA580C] rounded">
                       <h3 className="font-bold text-gray-900 mb-2">📌 Quantum Physics (78% weak)</h3>
                       <p className="text-gray-700 text-sm mb-3">Focus on wave-particle duality and uncertainty principle. 3 targeted exercises available.</p>
-                      <button className="px-4 py-2 bg-orange-600 text-white rounded-lg font-semibold hover:bg-orange-700 transition-all">
+                      <button className="px-4 py-2 bg-[#EA580C] text-white rounded-lg font-semibold hover:bg-orange-800 transition-all">
                         Practice Now
                       </button>
                     </div>
-                    <div className="p-4 bg-yellow-50 border-l-4 border-yellow-500 rounded">
+                    <div className="p-4 bg-yellow-50/70 border-l-4 border-[#FBBF24] rounded">
                       <h3 className="font-bold text-gray-900 mb-2">📌 Chemical Bonding (72% weak)</h3>
                       <p className="text-gray-700 text-sm mb-3">Need reinforcement on ionic vs covalent bonds. Quick 2-minute lesson + 4 questions.</p>
                       <button className="px-4 py-2 bg-yellow-600 text-white rounded-lg font-semibold hover:bg-yellow-700 transition-all">
@@ -467,7 +467,7 @@ function App() {
 
               {currentLearningModule === 'analytics' && (
                 <div className="bg-white rounded-xl p-8 border border-gray-100 mt-8">
-                  <button onClick={() => setCurrentLearningModule('home')} className="mb-4 text-blue-600 hover:underline font-semibold">← Back to Dashboard</button>
+                  <button onClick={() => setCurrentLearningModule('home')} className="mb-4 text-[#2563EB] hover:underline font-semibold">← Back to Dashboard</button>
                   <div className="flex justify-between items-start mb-6">
                     <div>
                       <h2 className="text-3xl font-bold text-gray-900">📊 Your Learning Analytics</h2>
@@ -477,7 +477,7 @@ function App() {
                       <select 
                         value={selectedSubject}
                         onChange={(e) => setSelectedSubject(e.target.value as any)}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#2563EB]"
                       >
                         <option value="all">All Subjects</option>
                         <option value="mathematics">Mathematics</option>
@@ -491,22 +491,22 @@ function App() {
                   {selectedSubject === 'all' && (
                     <>
                     <div className="grid md:grid-cols-2 gap-6 mb-8">
-                      <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl border border-blue-200">
+                      <div className="bg-gradient-to-br from-[#2563EB]/5 to-[#2563EB]/10 p-6 rounded-xl border border-[#2563EB]/20">
                         <p className="text-gray-600 text-sm">Overall Progress</p>
-                        <p className="text-4xl font-bold text-blue-600 mt-2">85%</p>
+                        <p className="text-4xl font-bold text-[#2563EB] mt-2">85%</p>
                         <p className="text-gray-600 text-sm mt-2">📈 +5% this week</p>
                       </div>
-                      <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl border border-green-200">
+                      <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
                         <p className="text-gray-600 text-sm">Questions Solved</p>
-                        <p className="text-4xl font-bold text-green-600 mt-2">127</p>
+                        <p className="text-4xl font-bold text-[#16A34A] mt-2">127</p>
                         <p className="text-gray-600 text-sm mt-2">Accuracy: 78%</p>
                       </div>
-                      <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl border border-purple-200">
+                      <div className="bg-gradient-to-br from-[#1F2937]/5 to-[#1F2937]/15 p-6 rounded-xl border border-[#1F2937]/20">
                         <p className="text-gray-600 text-sm">Study Streak</p>
-                        <p className="text-4xl font-bold text-purple-600 mt-2">12 Days</p>
+                        <p className="text-4xl font-bold text-[#1F2937] mt-2">12 Days</p>
                         <p className="text-gray-600 text-sm mt-2">Keep it up! 🔥</p>
                       </div>
-                      <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-xl border border-orange-200">
+                      <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
                         <p className="text-gray-600 text-sm">Time Spent</p>
                         <p className="text-4xl font-bold text-orange-600 mt-2">24.5h</p>
                         <p className="text-gray-600 text-sm mt-2">This month</p>
@@ -518,25 +518,25 @@ function App() {
                         <div>
                           <div className="flex justify-between mb-1">
                             <span className="text-sm font-semibold text-gray-700">Mathematics</span>
-                            <span className="text-sm font-bold text-blue-600">92%</span>
+                            <span className="text-sm font-bold text-[#2563EB]">92%</span>
                           </div>
                           <div className="w-full bg-gray-300 rounded-full h-2">
-                            <div className="bg-blue-600 h-2 rounded-full" style={{width: '92%'}}></div>
+                            <div className="bg-[#2563EB] h-2 rounded-full" style={{width: '92%'}}></div>
                           </div>
                         </div>
                         <div>
                           <div className="flex justify-between mb-1">
                             <span className="text-sm font-semibold text-gray-700">Physics</span>
-                            <span className="text-sm font-bold text-purple-600">78%</span>
+                            <span className="text-sm font-bold text-[#1F2937]">78%</span>
                           </div>
                           <div className="w-full bg-gray-300 rounded-full h-2">
-                            <div className="bg-purple-600 h-2 rounded-full" style={{width: '78%'}}></div>
+                            <div className="bg-[#1F2937] h-2 rounded-full" style={{width: '78%'}}></div>
                           </div>
                         </div>
                         <div>
                           <div className="flex justify-between mb-1">
                             <span className="text-sm font-semibold text-gray-700">Chemistry</span>
-                            <span className="text-sm font-bold text-green-600">85%</span>
+                            <span className="text-sm font-bold text-[#16A34A]">85%</span>
                           </div>
                           <div className="w-full bg-gray-300 rounded-full h-2">
                             <div className="bg-green-600 h-2 rounded-full" style={{width: '85%'}}></div>
@@ -557,20 +557,20 @@ function App() {
                   )}
 
                   {selectedSubject === 'mathematics' && (
-                    <div className="bg-blue-50 p-6 rounded-xl border-2 border-blue-200">
+                    <div className="bg-blue-50/70 p-6 rounded-xl border-2 border-[#2563EB]/20">
                       <h3 className="text-2xl font-bold text-gray-900 mb-6">📐 Mathematics Performance</h3>
                       <div className="grid md:grid-cols-3 gap-6 mb-8">
                         <div className="bg-blue-100 p-6 rounded-lg">
                           <p className="text-gray-700 font-semibold">Current Score</p>
-                          <p className="text-4xl font-bold text-blue-600 mt-2">92%</p>
+                          <p className="text-4xl font-bold text-[#2563EB] mt-2">92%</p>
                         </div>
                         <div className="bg-blue-100 p-6 rounded-lg">
                           <p className="text-gray-700 font-semibold">Questions Done</p>
-                          <p className="text-4xl font-bold text-blue-600 mt-2">34</p>
+                          <p className="text-4xl font-bold text-[#2563EB] mt-2">34</p>
                         </div>
                         <div className="bg-blue-100 p-6 rounded-lg">
                           <p className="text-gray-700 font-semibold">Time Spent</p>
-                          <p className="text-4xl font-bold text-blue-600 mt-2">8.5h</p>
+                          <p className="text-4xl font-bold text-[#2563EB] mt-2">8.5h</p>
                         </div>
                       </div>
                       <div className="bg-white p-4 rounded-lg">
@@ -582,20 +582,20 @@ function App() {
                   )}
 
                   {selectedSubject === 'physics' && (
-                    <div className="bg-purple-50 p-6 rounded-xl border-2 border-purple-200">
+                    <div className="bg-purple-50 p-6 rounded-xl border-2 border-[#1F2937]/20">
                       <h3 className="text-2xl font-bold text-gray-900 mb-6">⚛️ Physics Performance</h3>
                       <div className="grid md:grid-cols-3 gap-6 mb-8">
                         <div className="bg-purple-100 p-6 rounded-lg">
                           <p className="text-gray-700 font-semibold">Current Score</p>
-                          <p className="text-4xl font-bold text-purple-600 mt-2">78%</p>
+                          <p className="text-4xl font-bold text-[#1F2937] mt-2">78%</p>
                         </div>
                         <div className="bg-purple-100 p-6 rounded-lg">
                           <p className="text-gray-700 font-semibold">Questions Done</p>
-                          <p className="text-4xl font-bold text-purple-600 mt-2">28</p>
+                          <p className="text-4xl font-bold text-[#1F2937] mt-2">28</p>
                         </div>
                         <div className="bg-purple-100 p-6 rounded-lg">
                           <p className="text-gray-700 font-semibold">Time Spent</p>
-                          <p className="text-4xl font-bold text-purple-600 mt-2">6.2h</p>
+                          <p className="text-4xl font-bold text-[#1F2937] mt-2">6.2h</p>
                         </div>
                       </div>
                       <div className="bg-white p-4 rounded-lg">
@@ -612,15 +612,15 @@ function App() {
                       <div className="grid md:grid-cols-3 gap-6 mb-8">
                         <div className="bg-green-100 p-6 rounded-lg">
                           <p className="text-gray-700 font-semibold">Current Score</p>
-                          <p className="text-4xl font-bold text-green-600 mt-2">85%</p>
+                          <p className="text-4xl font-bold text-[#16A34A] mt-2">85%</p>
                         </div>
                         <div className="bg-green-100 p-6 rounded-lg">
                           <p className="text-gray-700 font-semibold">Questions Done</p>
-                          <p className="text-4xl font-bold text-green-600 mt-2">31</p>
+                          <p className="text-4xl font-bold text-[#16A34A] mt-2">31</p>
                         </div>
                         <div className="bg-green-100 p-6 rounded-lg">
                           <p className="text-gray-700 font-semibold">Time Spent</p>
-                          <p className="text-4xl font-bold text-green-600 mt-2">7.1h</p>
+                          <p className="text-4xl font-bold text-[#16A34A] mt-2">7.1h</p>
                         </div>
                       </div>
                       <div className="bg-white p-4 rounded-lg">
@@ -660,7 +660,7 @@ function App() {
 
               {currentLearningModule === 'materials' && (
                 <div className="bg-white rounded-xl p-8 border border-gray-100 mt-8">
-                  <button onClick={() => setCurrentLearningModule('home')} className="mb-4 text-blue-600 hover:underline font-semibold">← Back to Dashboard</button>
+                  <button onClick={() => setCurrentLearningModule('home')} className="mb-4 text-[#2563EB] hover:underline font-semibold">← Back to Dashboard</button>
                   
                   <div className="mb-6">
                     <h2 className="text-3xl font-bold text-gray-900 mb-2">🗂️ Study Materials & Resources</h2>
@@ -673,7 +673,7 @@ function App() {
                     <select 
                       value={selectedSubject}
                       onChange={(e) => setSelectedSubject(e.target.value as any)}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#2563EB]"
                     >
                       <option value="all">All Subjects</option>
                       <option value="mathematics">Mathematics</option>
@@ -687,10 +687,10 @@ function App() {
                     {/* MATHEMATICS MATERIALS */}
                     {(selectedSubject === 'all' || selectedSubject === 'mathematics') && (
                       <>
-                        <div className="border-t-2 border-blue-200 pt-4 mt-4">
+                        <div className="border-t-2 border-[#2563EB]/20 pt-4 mt-4">
                           <h3 className="text-xl font-bold text-blue-900 mb-4">📐 Mathematics Resources</h3>
                           <div className="space-y-3">
-                            <div className="p-4 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg border border-blue-200 hover:shadow-md transition-all">
+                            <div className="p-4 bg-gradient-to-r from-[#2563EB]/5 to-[#2563EB]/10 rounded-lg border border-[#2563EB]/20 hover:shadow-md transition-all">
                               <div className="flex justify-between items-start">
                                 <div>
                                   <h4 className="font-bold text-gray-900">📚 Calculus Derivatives - Complete Guide</h4>
@@ -701,7 +701,7 @@ function App() {
                               </div>
                             </div>
 
-                            <div className="p-4 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg border border-blue-200 hover:shadow-md transition-all">
+                            <div className="p-4 bg-gradient-to-r from-[#2563EB]/5 to-[#2563EB]/10 rounded-lg border border-[#2563EB]/20 hover:shadow-md transition-all">
                               <div className="flex justify-between items-start">
                                 <div>
                                   <h4 className="font-bold text-gray-900">📊 Algebra & Linear Equations - Problem Set</h4>
@@ -712,7 +712,7 @@ function App() {
                               </div>
                             </div>
 
-                            <div className="p-4 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg border border-blue-200 hover:shadow-md transition-all">
+                            <div className="p-4 bg-gradient-to-r from-[#2563EB]/5 to-[#2563EB]/10 rounded-lg border border-[#2563EB]/20 hover:shadow-md transition-all">
                               <div className="flex justify-between items-start">
                                 <div>
                                   <h4 className="font-bold text-gray-900">🎥 Trigonometry Masterclass (Video Series)</h4>
@@ -723,7 +723,7 @@ function App() {
                               </div>
                             </div>
 
-                            <div className="p-4 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg border border-blue-200 hover:shadow-md transition-all">
+                            <div className="p-4 bg-gradient-to-r from-[#2563EB]/5 to-[#2563EB]/10 rounded-lg border border-[#2563EB]/20 hover:shadow-md transition-all">
                               <div className="flex justify-between items-start">
                                 <div>
                                   <h4 className="font-bold text-gray-900">🧮 Interactive Math Calculator & Tool</h4>
@@ -734,7 +734,7 @@ function App() {
                               </div>
                             </div>
 
-                            <div className="p-4 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg border border-blue-200 hover:shadow-md transition-all">
+                            <div className="p-4 bg-gradient-to-r from-[#2563EB]/5 to-[#2563EB]/10 rounded-lg border border-[#2563EB]/20 hover:shadow-md transition-all">
                               <div className="flex justify-between items-start">
                                 <div>
                                   <h4 className="font-bold text-gray-900">📖 Statistics & Probability Handbook</h4>
@@ -752,10 +752,10 @@ function App() {
                     {/* PHYSICS MATERIALS */}
                     {(selectedSubject === 'all' || selectedSubject === 'physics') && (
                       <>
-                        <div className="border-t-2 border-purple-200 pt-4 mt-4">
+                        <div className="border-t-2 border-[#1F2937]/20 pt-4 mt-4">
                           <h3 className="text-xl font-bold text-purple-900 mb-4">⚛️ Physics Resources</h3>
                           <div className="space-y-3">
-                            <div className="p-4 bg-gradient-to-r from-purple-50 to-purple-100 rounded-lg border border-purple-200 hover:shadow-md transition-all">
+                            <div className="p-4 bg-gradient-to-r from-[#1F2937]/5 to-[#1F2937]/15 rounded-lg border border-[#1F2937]/20 hover:shadow-md transition-all">
                               <div className="flex justify-between items-start">
                                 <div>
                                   <h4 className="font-bold text-gray-900">🎥 Quantum Physics Explained (Video Series)</h4>
@@ -766,7 +766,7 @@ function App() {
                               </div>
                             </div>
 
-                            <div className="p-4 bg-gradient-to-r from-purple-50 to-purple-100 rounded-lg border border-purple-200 hover:shadow-md transition-all">
+                            <div className="p-4 bg-gradient-to-r from-[#1F2937]/5 to-[#1F2937]/15 rounded-lg border border-[#1F2937]/20 hover:shadow-md transition-all">
                               <div className="flex justify-between items-start">
                                 <div>
                                   <h4 className="font-bold text-gray-900">📚 Mechanics & Dynamics - Complete Textbook</h4>
@@ -777,7 +777,7 @@ function App() {
                               </div>
                             </div>
 
-                            <div className="p-4 bg-gradient-to-r from-purple-50 to-purple-100 rounded-lg border border-purple-200 hover:shadow-md transition-all">
+                            <div className="p-4 bg-gradient-to-r from-[#1F2937]/5 to-[#1F2937]/15 rounded-lg border border-[#1F2937]/20 hover:shadow-md transition-all">
                               <div className="flex justify-between items-start">
                                 <div>
                                   <h4 className="font-bold text-gray-900">🔬 Electromagnetic Theory Interactive Simulator</h4>
@@ -788,7 +788,7 @@ function App() {
                               </div>
                             </div>
 
-                            <div className="p-4 bg-gradient-to-r from-purple-50 to-purple-100 rounded-lg border border-purple-200 hover:shadow-md transition-all">
+                            <div className="p-4 bg-gradient-to-r from-[#1F2937]/5 to-[#1F2937]/15 rounded-lg border border-[#1F2937]/20 hover:shadow-md transition-all">
                               <div className="flex justify-between items-start">
                                 <div>
                                   <h4 className="font-bold text-gray-900">📊 Thermodynamics & Heat Transfer Guide</h4>
@@ -799,7 +799,7 @@ function App() {
                               </div>
                             </div>
 
-                            <div className="p-4 bg-gradient-to-r from-purple-50 to-purple-100 rounded-lg border border-purple-200 hover:shadow-md transition-all">
+                            <div className="p-4 bg-gradient-to-r from-[#1F2937]/5 to-[#1F2937]/15 rounded-lg border border-[#1F2937]/20 hover:shadow-md transition-all">
                               <div className="flex justify-between items-start">
                                 <div>
                                   <h4 className="font-bold text-gray-900">🌊 Waves & Optics Problem Solutions</h4>
@@ -892,7 +892,7 @@ function App() {
                                   <p className="text-gray-700 text-sm mt-1">100+ interactive flashcards covering cell organelles, functions, prokaryotes vs eukaryotes, and cell processes</p>
                                   <p className="text-xs text-gray-600 mt-2">Format: Interactive | Difficulty: Beginner | Updated: 1 week ago</p>
                                 </div>
-                                <button className="px-4 py-2 bg-orange-600 text-white rounded-lg font-semibold hover:bg-orange-700 whitespace-nowrap">Study</button>
+                                <button className="px-4 py-2 bg-[#EA580C] text-white rounded-lg font-semibold hover:bg-orange-800 whitespace-nowrap">Study</button>
                               </div>
                             </div>
 
@@ -903,7 +903,7 @@ function App() {
                                   <p className="text-gray-700 text-sm mt-1">6 comprehensive videos on light reactions, dark reactions, cellular respiration with animations and diagrams</p>
                                   <p className="text-xs text-gray-600 mt-2">Format: Video | Difficulty: Intermediate | Duration: 3+ hours</p>
                                 </div>
-                                <button className="px-4 py-2 bg-orange-600 text-white rounded-lg font-semibold hover:bg-orange-700 whitespace-nowrap">Watch</button>
+                                <button className="px-4 py-2 bg-[#EA580C] text-white rounded-lg font-semibold hover:bg-orange-800 whitespace-nowrap">Watch</button>
                               </div>
                             </div>
 
@@ -914,7 +914,7 @@ function App() {
                                   <p className="text-gray-700 text-sm mt-1">Detailed explanation of Mendelian genetics, DNA replication, protein synthesis, mutations with 60+ solved Punnett squares</p>
                                   <p className="text-xs text-gray-600 mt-2">Format: PDF | Difficulty: Intermediate-Advanced | Updated: 10 days ago</p>
                                 </div>
-                                <button className="px-4 py-2 bg-orange-600 text-white rounded-lg font-semibold hover:bg-orange-700 whitespace-nowrap">Download</button>
+                                <button className="px-4 py-2 bg-[#EA580C] text-white rounded-lg font-semibold hover:bg-orange-800 whitespace-nowrap">Download</button>
                               </div>
                             </div>
 
@@ -925,7 +925,7 @@ function App() {
                                   <p className="text-gray-700 text-sm mt-1">Interactive 3D model of human body systems: skeletal, muscular, circulatory, nervous, digestive, respiratory</p>
                                   <p className="text-xs text-gray-600 mt-2">Format: Web App | Difficulty: All Levels | Updated: 2 days ago</p>
                                 </div>
-                                <button className="px-4 py-2 bg-orange-600 text-white rounded-lg font-semibold hover:bg-orange-700 whitespace-nowrap">Launch</button>
+                                <button className="px-4 py-2 bg-[#EA580C] text-white rounded-lg font-semibold hover:bg-orange-800 whitespace-nowrap">Launch</button>
                               </div>
                             </div>
 
@@ -936,7 +936,7 @@ function App() {
                                   <p className="text-gray-700 text-sm mt-1">Comprehensive notes on ecosystems, food chains, biodiversity, natural selection, and adaptation with diagrams</p>
                                   <p className="text-xs text-gray-600 mt-2">Format: PDF | Difficulty: Beginner-Intermediate | Updated: 3 weeks ago</p>
                                 </div>
-                                <button className="px-4 py-2 bg-orange-600 text-white rounded-lg font-semibold hover:bg-orange-700 whitespace-nowrap">Download</button>
+                                <button className="px-4 py-2 bg-[#EA580C] text-white rounded-lg font-semibold hover:bg-orange-800 whitespace-nowrap">Download</button>
                               </div>
                             </div>
                           </div>
@@ -956,10 +956,10 @@ function App() {
       <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
         <div className="section-container py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-gradient-to-r from-[#2563EB] to-[#1F2937] rounded-lg flex items-center justify-center">
               <Brain className="text-white" size={24} />
             </div>
-            <span className="font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+            <span className="font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r from-[#2563EB] to-[#1F2937]">
               Infinity Tutor
             </span>
           </div>
@@ -984,7 +984,7 @@ function App() {
             ) : (
               <button
                 onClick={() => setIsModalOpen(true)}
-                className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:shadow-lg transition-all"
+                className="px-4 py-2 bg-gradient-to-r from-[#2563EB] to-[#1E40AF] text-white rounded-lg font-semibold hover:shadow-lg transition-all"
               >
                 Login / Sign Up
               </button>
@@ -1005,7 +1005,7 @@ function App() {
           
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 text-gray-900 leading-tight">
             A Tutor That<br />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#2563EB] via-[#1F2937] to-[#84CC16]">
               Never Gets Tired
             </span>
           </h1>
@@ -1022,7 +1022,12 @@ function App() {
               Get Started Now
               <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
             </button>
-            <button className="px-8 py-3 border-2 border-gray-300 text-gray-900 rounded-lg font-semibold hover:border-purple-600 hover:text-purple-600 transition-all duration-300">
+            <button 
+              onClick={() => {
+                document.querySelector('#features-section')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="px-8 py-3 border-2 border-gray-300 text-gray-900 rounded-lg font-semibold hover:border-purple-600 hover:text-[#1F2937] transition-all duration-300"
+            >
               Learn More
             </button>
           </div>
@@ -1035,7 +1040,7 @@ function App() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h2 className="text-4xl font-bold text-gray-900">
-                What Makes Infinity Tutor <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Different</span>
+                What Makes Infinity Tutor <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2563EB] to-[#1F2937]">Different</span>
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed">
                 Traditional tutoring follows a one-size-fits-all approach. Infinity Tutor leverages advanced AI to understand each student's unique learning patterns, mistakes, and growth trajectory.
@@ -1060,11 +1065,29 @@ function App() {
             </div>
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl blur-3xl opacity-20"></div>
-              <div className="relative bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 border border-gray-100">
+              <div className="relative bg-gradient-to-br from-[#F3F4F6] via-white to-[#F3F4F6] rounded-2xl p-8 border border-gray-100">
                 <div className="space-y-4">
-                  <div className="h-12 bg-gradient-to-r from-blue-200 to-purple-200 rounded-lg"></div>
-                  <div className="h-12 bg-gradient-to-r from-purple-200 to-pink-200 rounded-lg"></div>
-                  <div className="h-12 bg-gradient-to-r from-pink-200 to-blue-200 rounded-lg"></div>
+                  <div className="p-4 bg-white rounded-lg border border-[#2563EB]/30">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Target className="text-[#2563EB]" size={18} />
+                      <span className="font-semibold text-gray-900 text-sm">Real-time Analysis</span>
+                    </div>
+                    <p className="text-xs text-gray-600">AI monitors every answer and adapts instantly</p>
+                  </div>
+                  <div className="p-4 bg-white rounded-lg border border-[#1F2937]/30">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Zap className="text-[#1F2937]" size={18} />
+                      <span className="font-semibold text-gray-900 text-sm">Smart Adaptation</span>
+                    </div>
+                    <p className="text-xs text-gray-600">Difficulty adjusts based on performance</p>
+                  </div>
+                  <div className="p-4 bg-white rounded-lg border border-[#84CC16]/30">
+                    <div className="flex items-center gap-2 mb-2">
+                      <BarChart3 className="text-[#84CC16]" size={18} />
+                      <span className="font-semibold text-gray-900 text-sm">Progress Tracking</span>
+                    </div>
+                    <p className="text-xs text-gray-600">Detailed analytics of your growth</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1073,7 +1096,7 @@ function App() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 gradient-soft">
+      <section id="features-section" className="py-20 px-4 gradient-soft">
         <div className="section-container">
           <h2 className="section-title">Powerful Features</h2>
           <p className="section-subtitle">
@@ -1092,8 +1115,8 @@ function App() {
                 >
                   <div className={`w-14 h-14 rounded-lg flex items-center justify-center mb-4 transition-all duration-300 ${
                     hoveredFeature === index 
-                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white scale-110' 
-                      : 'bg-gradient-to-r from-blue-100 to-purple-100 text-blue-600'
+                      ? 'bg-gradient-to-r from-[#2563EB] to-[#1E40AF] text-white scale-110' 
+                      : 'bg-gradient-to-r from-blue-100 to-purple-100 text-[#2563EB]'
                   }`}>
                     <Icon size={28} />
                   </div>
@@ -1125,7 +1148,7 @@ function App() {
                 <div className="relative">
                   <div className={`text-6xl font-bold mb-4 transition-all duration-300 ${
                     hoveredStep === index 
-                      ? 'text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600' 
+                      ? 'text-transparent bg-clip-text bg-gradient-to-r from-[#2563EB] to-[#1E40AF]' 
                       : 'text-gray-200'
                   }`}>
                     {step.number}
@@ -1146,7 +1169,7 @@ function App() {
             <p className="text-lg mb-6 opacity-90">Start with a free trial today and experience personalized learning</p>
             <button 
               onClick={() => setIsModalOpen(true)}
-              className="px-8 py-3 bg-white text-purple-600 rounded-lg font-bold hover:bg-gray-100 transition-all duration-300"
+              className="px-8 py-3 bg-white text-[#1F2937] rounded-lg font-bold hover:bg-gray-100 transition-all duration-300"
             >
               Start Learning Free
             </button>
@@ -1159,7 +1182,7 @@ function App() {
         <div className="section-container">
           <div className="grid md:grid-cols-3 gap-8 text-center mb-12">
             <div className="p-8">
-              <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mb-2">
+              <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#2563EB] to-[#1E40AF] mb-2">
                 10K+
               </div>
               <p className="text-xl text-gray-700 font-semibold">Students Empowered</p>
@@ -1215,7 +1238,7 @@ function App() {
 
           <div className="mt-12 text-center">
             <p className="text-gray-600 text-lg">
-              More features coming soon! <span className="font-semibold text-purple-600">Follow us for updates</span>
+              More features coming soon! <span className="font-semibold text-[#1F2937]">Follow us for updates</span>
             </p>
           </div>
         </div>
@@ -1316,7 +1339,7 @@ function App() {
                       value={userName}
                       onChange={(e) => setUserName(e.target.value)}
                       required
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2563EB] transition-all"
                     />
                   </div>
 
@@ -1330,7 +1353,7 @@ function App() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2563EB] transition-all"
                     />
                   </div>
 
@@ -1340,7 +1363,7 @@ function App() {
                     </label>
                     <select
                       required
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2563EB] transition-all"
                     >
                       <option value="">Select your level</option>
                       <option value="high-school">High School</option>
@@ -1352,7 +1375,7 @@ function App() {
 
                   <button
                     type="submit"
-                    className="w-full py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-bold hover:shadow-lg transition-all duration-300 mt-6"
+                    className="w-full py-3 bg-gradient-to-r from-[#2563EB] to-[#1E40AF] text-white rounded-lg font-bold hover:shadow-lg transition-all duration-300 mt-6"
                   >
                     Continue to Email Verification
                   </button>
@@ -1367,7 +1390,7 @@ function App() {
                     Already have an account?{' '}
                     <button
                       onClick={() => setAuthScreen('login')}
-                      className="text-purple-600 font-semibold hover:underline"
+                      className="text-[#1F2937] font-semibold hover:underline"
                     >
                       Login here
                     </button>
@@ -1380,8 +1403,8 @@ function App() {
             {authScreen === 'verify' && (
               <>
                 <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle className="text-green-500" size={32} />
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#2563EB]/20 to-[#84CC16]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle className="text-[#84CC16]" size={32} />
                   </div>
                   <h2 className="text-3xl font-bold mb-2 text-gray-900">Verify Your Email</h2>
                   <p className="text-gray-600 text-sm">We sent a confirmation email to <span className="font-semibold">{userEmail}</span></p>
@@ -1412,7 +1435,7 @@ function App() {
                       value={verificationCode}
                       onChange={(e) => setVerificationCode(e.target.value)}
                       required
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all text-center text-2xl tracking-widest"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2563EB] transition-all text-center text-2xl tracking-widest"
                     />
                     <p className="text-xs text-gray-500 text-center mt-2">
                       Demo code: <span className="font-mono bg-gray-100 px-2 py-1 rounded">123456</span>
@@ -1421,7 +1444,7 @@ function App() {
 
                   <button
                     type="submit"
-                    className="w-full py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-bold hover:shadow-lg transition-all duration-300 mt-6"
+                    className="w-full py-3 bg-gradient-to-r from-[#2563EB] to-[#1E40AF] text-white rounded-lg font-bold hover:shadow-lg transition-all duration-300 mt-6"
                   >
                     Verify & Continue
                   </button>
@@ -1429,7 +1452,7 @@ function App() {
                   <button
                     type="button"
                     onClick={() => setAuthScreen('signup')}
-                    className="w-full py-3 border-2 border-gray-300 text-gray-700 rounded-lg font-semibold hover:border-purple-600 hover:text-purple-600 transition-all"
+                    className="w-full py-3 border-2 border-gray-300 text-gray-700 rounded-lg font-semibold hover:border-[#2563EB] hover:text-[#2563EB] transition-all"
                   >
                     Back to Sign Up
                   </button>
@@ -1476,7 +1499,7 @@ function App() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2563EB] transition-all"
                     />
                   </div>
 
@@ -1490,13 +1513,13 @@ function App() {
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       required
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2563EB] transition-all"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-bold hover:shadow-lg transition-all duration-300 mt-6"
+                    className="w-full py-3 bg-gradient-to-r from-[#2563EB] to-[#1E40AF] text-white rounded-lg font-bold hover:shadow-lg transition-all duration-300 mt-6"
                   >
                     Login
                   </button>
@@ -1507,7 +1530,7 @@ function App() {
                     Don't have an account?{' '}
                     <button
                       onClick={() => setAuthScreen('signup')}
-                      className="text-purple-600 font-semibold hover:underline"
+                      className="text-[#1F2937] font-semibold hover:underline"
                     >
                       Sign up here
                     </button>
@@ -1520,16 +1543,16 @@ function App() {
             {authScreen === 'dashboard' && (
               <>
                 <div className="text-center mb-8">
-                  <div className="w-16 h-16 bg-gradient-to-r from-green-100 to-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle className="text-green-500" size={32} />
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#84CC16]/20 to-[#2563EB]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle className="text-[#84CC16]" size={32} />
                   </div>
                   <h2 className="text-3xl font-bold text-gray-900">Welcome, {userFullName || 'Student'}!</h2>
                   <p className="text-gray-600 text-sm mt-2">Your email has been verified</p>
                 </div>
 
-                <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6 mb-6 border border-blue-200">
+                <div className="bg-gradient-to-r from-[#F3F4F6] via-white to-[#F3F4F6] rounded-xl p-6 mb-6 border border-[#2563EB]/20">
                   <div className="flex items-center gap-3 mb-4">
-                    <BookOpen className="text-blue-600" size={24} />
+                    <BookOpen className="text-[#2563EB]" size={24} />
                     <h3 className="font-bold text-gray-900">Ready to Start Learning?</h3>
                   </div>
                   <p className="text-sm text-gray-600 mb-4">
@@ -1540,7 +1563,7 @@ function App() {
                       setIsOnDashboard(true);
                       setIsModalOpen(false);
                     }}
-                    className="w-full py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:shadow-lg transition-all"
+                    className="w-full py-2 bg-gradient-to-r from-[#2563EB] to-[#1E40AF] text-white rounded-lg font-semibold hover:shadow-lg transition-all"
                   >
                     Go to Dashboard
                   </button>
@@ -1590,7 +1613,7 @@ function App() {
             setIsModalOpen(true);
             setAuthScreen('dashboard');
           }}
-          className="fixed top-28 right-6 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:shadow-lg transition-all"
+          className="fixed top-28 right-6 px-4 py-2 bg-gradient-to-r from-[#2563EB] to-[#1E40AF] text-white rounded-lg font-semibold hover:shadow-lg transition-all"
         >
           Dashboard
         </button>
@@ -1602,3 +1625,55 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

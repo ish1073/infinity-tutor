@@ -8,25 +8,25 @@
   }
 
   body {
-    @apply text-gray-900 bg-white;
+    @apply text-gray-900 bg-[#F3F4F6];
   }
 }
 
 @layer components {
   .gradient-hero {
-    @apply bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500;
+    @apply bg-gradient-to-r from-[#2563EB] via-[#1E40AF] to-[#1e3a8a];
   }
 
   .gradient-soft {
-    @apply bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50;
+    @apply bg-gradient-to-br from-[#F3F4F6] via-[#F3F4F6] to-white;
   }
 
   .card-hover {
-    @apply transition-all duration-300 hover:shadow-2xl hover:scale-105;
+    @apply transition-all duration-300 hover:shadow-xl hover:scale-105;
   }
 
   .btn-primary {
-    @apply px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:-translate-y-1;
+    @apply px-8 py-3 bg-gradient-to-r from-[#2563EB] to-[#1e40af] text-white rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:-translate-y-1;
   }
 
   .section-container {
@@ -34,7 +34,7 @@
   }
 
   .section-title {
-    @apply text-4xl sm:text-5xl font-bold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600;
+    @apply text-4xl sm:text-5xl font-bold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#2563EB] to-[#1e40af];
   }
 
   .section-subtitle {
