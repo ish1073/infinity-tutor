@@ -4,7 +4,6 @@ import {
   CheckCircle, 
   Zap, 
   BarChart3, 
-  MessageCircle, 
   Target,
   Smartphone,
   Languages,
@@ -34,7 +33,6 @@ function App() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [userAnswers, setUserAnswers] = useState<{[key: number]: string}>({});
   const [practiceCompleted, setPracticeCompleted] = useState(false);
-  const [showFeedback, setShowFeedback] = useState(false);
   const [isAnswerCorrect, setIsAnswerCorrect] = useState(false);
 
   const features = [
@@ -259,7 +257,7 @@ function App() {
               {/* Learning Modules */}
               {currentLearningModule === 'practice' && (
                 <div className="bg-white rounded-xl p-8 border border-gray-100 mt-8">
-                  <button onClick={() => {setCurrentLearningModule('home'); setCurrentQuestionIndex(0); setUserAnswers({}); setPracticeCompleted(false); setShowFeedback(false); setIsAnswerCorrect(false);}} className="mb-4 text-blue-600 hover:underline font-semibold">← Back to Dashboard</button>
+                  <button onClick={() => {setCurrentLearningModule('home'); setCurrentQuestionIndex(0); setUserAnswers({}); setPracticeCompleted(false); setIsAnswerCorrect(false);}} className="mb-4 text-blue-600 hover:underline font-semibold">← Back to Dashboard</button>
                   
                   {!practiceCompleted ? (
                     <>
@@ -272,7 +270,7 @@ function App() {
                           <label className="block text-sm font-semibold text-gray-700 mb-2">Filter by Subject:</label>
                           <select 
                             value={selectedSubject}
-                            onChange={(e) => {setSelectedSubject(e.target.value as any); setCurrentQuestionIndex(0); setUserAnswers({}); setShowFeedback(false); setIsAnswerCorrect(false);}}
+                            onChange={(e) => {setSelectedSubject(e.target.value as any); setCurrentQuestionIndex(0); setUserAnswers({}); setIsAnswerCorrect(false);}}
                             className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
                           >
                             <option value="all">All Subjects</option>
@@ -316,7 +314,6 @@ function App() {
                                     onClick={() => {
                                       if (!userAnswers[currentQuestion.id]) {
                                         setUserAnswers({...userAnswers, [currentQuestion.id]: option});
-                                        setShowFeedback(true);
                                         setIsAnswerCorrect(option === currentQuestion.correct);
                                       }
                                     }}
@@ -354,7 +351,6 @@ function App() {
                                   onClick={() => {
                                     if (userAnswers[currentQuestion.id]) {
                                       setCurrentQuestionIndex(currentQuestionIndex + 1);
-                                      setShowFeedback(false);
                                       setIsAnswerCorrect(false);
                                     }
                                   }}
@@ -380,7 +376,7 @@ function App() {
                               </>
                             )}
                             <button 
-                              onClick={() => {setCurrentLearningModule('home'); setCurrentQuestionIndex(0); setUserAnswers({}); setPracticeCompleted(false); setShowFeedback(false); setIsAnswerCorrect(false);}}
+                              onClick={() => {setCurrentLearningModule('home'); setCurrentQuestionIndex(0); setUserAnswers({}); setPracticeCompleted(false); setIsAnswerCorrect(false);}}
                               className="px-6 py-4 border-2 border-gray-300 text-gray-700 rounded-lg font-bold hover:border-gray-400 transition-all"
                             >
                               Cancel
@@ -421,7 +417,6 @@ function App() {
                             setCurrentQuestionIndex(0);
                             setUserAnswers({});
                             setPracticeCompleted(false);
-                            setShowFeedback(false);
                             setIsAnswerCorrect(false);
                           }}
                           className="flex-1 px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-bold hover:shadow-lg transition-all"
@@ -429,7 +424,7 @@ function App() {
                           Retake Quiz
                         </button>
                         <button 
-                          onClick={() => {setCurrentLearningModule('home'); setCurrentQuestionIndex(0); setUserAnswers({}); setPracticeCompleted(false); setShowFeedback(false); setIsAnswerCorrect(false);}}
+                          onClick={() => {setCurrentLearningModule('home'); setCurrentQuestionIndex(0); setUserAnswers({}); setPracticeCompleted(false); setIsAnswerCorrect(false);}}
                           className="px-6 py-4 border-2 border-gray-300 text-gray-700 rounded-lg font-bold hover:border-gray-400 transition-all"
                         >
                           Back to Dashboard
